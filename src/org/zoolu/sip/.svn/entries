@@ -1,0 +1,52 @@
+10
+
+dir
+620
+http://sipdroid.googlecode.com/svn/trunk/src/org/zoolu/sip
+http://sipdroid.googlecode.com/svn
+
+
+
+2011-06-24T09:52:52.370002Z
+615
+pmerle71
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8b64e154-0f13-11de-9106-f38757f67524
+
+authentication
+dir
+
+dialog
+dir
+
+message
+dir
+
+transaction
+dir
+
+address
+dir
+
+header
+dir
+
+provider
+dir
+
+call
+dir
+
