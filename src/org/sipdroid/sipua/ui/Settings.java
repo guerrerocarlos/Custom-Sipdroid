@@ -677,7 +677,7 @@ public class Settings extends PreferenceActivity implements OnSharedPreferenceCh
        	getPreferenceScreen().findPreference(PREF_BLUETOOTH).setEnabled(RtpStreamReceiver.isBluetoothSupported());
     }
 
-    @Override
+
 	public void onClick(DialogInterface arg0, int arg1) {
 		Editor edit = settings.edit();
  		edit.putString(mKey, transferText.getText().toString());

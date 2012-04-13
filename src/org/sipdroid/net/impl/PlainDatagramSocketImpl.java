@@ -20,6 +20,7 @@
 
 package org.sipdroid.net.impl;
 
+
 import java.io.FileDescriptor;
 import java.io.IOException;
 import java.io.InterruptedIOException;
@@ -33,7 +34,6 @@ import java.net.SocketException;
 import java.net.SocketOptions;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
-import java.security.AccessController;
 
 /**
  * The default, concrete instance of datagram sockets. This class does not
@@ -151,7 +151,6 @@ public class PlainDatagramSocketImpl extends DatagramSocketImpl {
         close();
     }
 
-    @Override
     public Object getOption(int optID) throws SocketException {
         if (optID == SocketOptions.SO_TIMEOUT) {
             return Integer.valueOf(receiveTimeout);
@@ -203,7 +202,8 @@ public class PlainDatagramSocketImpl extends DatagramSocketImpl {
     @Override
     public void joinGroup(SocketAddress addr, NetworkInterface netInterface) throws IOException {
         if (addr instanceof InetSocketAddress) {
-            InetAddress groupAddr = ((InetSocketAddress) addr).getAddress();
+            @SuppressWarnings("unused")
+			InetAddress groupAddr = ((InetSocketAddress) addr).getAddress();
 //            setOption(IP_MULTICAST_ADD, new GenericIPMreq(groupAddr, netInterface));
         }
     }
@@ -217,7 +217,8 @@ public class PlainDatagramSocketImpl extends DatagramSocketImpl {
     public void leaveGroup(SocketAddress addr, NetworkInterface netInterface)
             throws IOException {
         if (addr instanceof InetSocketAddress) {
-            InetAddress groupAddr = ((InetSocketAddress) addr).getAddress();
+            @SuppressWarnings("unused")
+			InetAddress groupAddr = ((InetSocketAddress) addr).getAddress();
 //            setOption(IP_MULTICAST_DROP, new GenericIPMreq(groupAddr, netInterface));
         }
     }
@@ -282,7 +283,6 @@ public class PlainDatagramSocketImpl extends DatagramSocketImpl {
      * @throws SocketException thrown if the option value is unsupported or
      *         invalid
      */
-    @Override
     public void setOption(int optID, Object val) throws SocketException {
         /*
          * for datagram sockets on some platforms we have to set both the

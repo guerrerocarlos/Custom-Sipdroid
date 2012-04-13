@@ -439,7 +439,7 @@ public class Sipdroid extends Activity implements OnDismissListener {
 		return unknown;		
 	}
 
-	@Override
+
 	public void onDismiss(DialogInterface dialog) {
 		onResume();
 	}

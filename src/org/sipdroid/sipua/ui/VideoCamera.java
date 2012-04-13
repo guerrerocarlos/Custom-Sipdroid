@@ -642,19 +642,19 @@ public class VideoCamera extends CallScreen implements
 		return true;	
 	}
 
-	@Override
+
 	public boolean onError(MediaPlayer mp, int what, int extra) {
 		return true;
 	}
 
-	@Override
+
 	public void onClick(View v) {
 		useFront = !useFront;
 		initializeVideo();
 		change = true;
 	}
 
-	@Override
+
 	public boolean onLongClick(View v) {
 		videoQualityHigh = !videoQualityHigh;
 		initializeVideo();

@@ -485,7 +485,6 @@ public class InCallScreen extends CallScreen implements View.OnClickListener, Se
 		return false;
 	}
 
-	@Override
 	public void onAccuracyChanged(Sensor sensor, int accuracy) {
 	}
 
@@ -498,7 +497,6 @@ public class InCallScreen extends CallScreen implements View.OnClickListener, Se
 	static final float PROXIMITY_THRESHOLD = 5.0f;
 	public static boolean pactive;
 	
-	@Override
 	public void onSensorChanged(SensorEvent event) {
 		if (first) {
 			first = false;
